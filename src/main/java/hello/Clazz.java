@@ -26,6 +26,8 @@ public class Clazz implements BeforeSave{
     String states;
     int evaluationRate;
 
+    String title;
+
     @ManyToOne
     @JoinColumn(name="cid")
     Course course;
@@ -53,6 +55,16 @@ public class Clazz implements BeforeSave{
     public Long getId() {
         return id;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+
 
     public void setId(Long id) {
         this.id = id;

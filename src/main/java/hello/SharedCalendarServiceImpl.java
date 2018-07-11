@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ public class SharedCalendarServiceImpl implements SharedCalendarService {
     ClazzDayRepository clazzDayRepository;
 
     @Override
-    public List<ClazzDay> getSchedules(Calendar calendar, Instructor instructor) {
+    public List<ClazzDay> getSchedules(Date calendar, Instructor instructor) {
         List<ClazzDay> clazzDays = clazzDayRepository.findByDateAndInstructor(calendar, instructor);
 
         return clazzDays;

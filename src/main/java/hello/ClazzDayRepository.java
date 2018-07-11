@@ -3,6 +3,7 @@ package hello;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -10,5 +11,5 @@ import java.util.List;
  */
 public interface ClazzDayRepository extends PagingAndSortingRepository<ClazzDay, Long> {
 
-    List<ClazzDay> findByDateAndInstructor(Calendar date, Instructor instructor);
+    List<ClazzDay> findByDateAndInstructor(Date date, Instructor instructor);
 }

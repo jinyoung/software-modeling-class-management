@@ -2,6 +2,7 @@ package hello;
 
 import javax.persistence.*;
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by uengine on 2018. 1. 27..
@@ -12,7 +13,7 @@ public class ClazzDay {
     @Id
     @GeneratedValue
     Long id;
-    Calendar date;
+    Date date;
     int startTime;
     int endTime;
 
@@ -38,11 +39,11 @@ public class ClazzDay {
         this.id = id;
     }
 
-    public Calendar getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(Calendar date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
